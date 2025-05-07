@@ -32,10 +32,6 @@ const pulse = keyframes`
   100% { transform: scale(1); opacity: 0.8; }
 `;
 
-const slideIn = keyframes`
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-`;
 
 // Styled Components
 const Wrapper = styled.div`
