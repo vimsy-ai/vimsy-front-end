@@ -2,6 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import Typography from "../Typography";
+import { Zap } from "lucide-react";
 
 const Container = styled.div`
   padding: 15px 50px;
@@ -17,7 +18,8 @@ const Left = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%; 
+  gap: 10px;
 `;
 
 const Center = styled.div`
@@ -47,7 +49,10 @@ const Profile = styled.div`
 const Navbar = () => {
   return (
     <Container>
-      <Left>Vimsy</Left>
+      <Left>
+        <Zap className="h-10 w-10 text-blue-600" />
+        <Typography styling="color: #0069a3; font-size: 30px; font-weight: 600">Vimsy</Typography>
+      </Left>
       <Right></Right>
       <Center>
         {/* <Typography styling="font-weight:500; font-size:20px; background: var(--font);-webkit-background-clip: text; -webkit-text-fill-color: transparent;">

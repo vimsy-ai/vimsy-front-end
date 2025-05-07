@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { Zap } from "lucide-react";
+import Footer from "../../ReuseableComponents/Footer/Footer";
 // import { Button } from "@/components/ui/button";
 
 // Animations
@@ -148,18 +149,20 @@ const Right = styled.div`
 
 const Middle = styled.div`
   width: 100%;
-  padding: 40px 80px 40px 80px;
-  // height: 1000px;
+  padding: 100px 80px;
+  // height: 700px;
   z-index: 1;
   // border-top: 0.5px solid #0069a3;
+
 `;
 
 const LeftSection = styled.div`
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  width: 45%;
+  text-align: center;
+  width: 100%;
   gap: 10px;
   line-height: 10px;
 `;
@@ -218,6 +221,37 @@ const SocialIcon = styled.div`
     animation-delay: ${(props) => props.$delay || "0s"};
   }
 `;
+
+const Bottom = styled.div`
+  width: 100%;
+  padding: 0px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 100px;
+`;
+
+const Title = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+`;
+
+const Waitlist = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+`;
+
+
 const Landing = () => {
   return (
     <Wrapper>
@@ -243,15 +277,16 @@ const Landing = () => {
                 justifyContent: "flex-start",
                 border: "1px solid #000",
                 width: "fit-content",
-                padding: "0px 20px",
+                padding: "5px 20px",
                 borderRadius: "25px",
               }}
             >
               <Typography styling="font-weight: 600; font-size: 15px; color: #000;">
-                Join the Waitlist
+                Supercharged by AI
               </Typography>
-              <MdArrowOutward size={24} color="black" />
+              <Zap className="h-5 w-5 text-blue-600" />
             </div>
+            
             <Typography styling="font-weight: 700; font-size: 60px; line-height: 80px; color: #000;">
               AI Powered Marketing Templates
             </Typography>
@@ -414,8 +449,54 @@ const Landing = () => {
           </Cards>
         </Middle>
 
-      
+        <Bottom>
+          <Title>
+            <Typography styling="font-weight: 600; font-size: 45px; color: #000; line-height: 55px;">
+              Stay Tuned - Coming Soon
+            </Typography>
+            <Typography styling="font-weight: 400; font-size: 20px; line-height: 30px; color: rgba(0,0,0,0.5); width: 49%; text-align: center;">
+              We're finalizing our pricing plans to offer you the best value.
+              Sign up for our waitlist to be the first to know when we launch.
+            </Typography>{" "}
+          </Title>
+          <Waitlist>
+            <input
+              type="text"
+              placeholder="Enter your email address"
+              style={{
+                width: "400px",
+                borderRadius: "30px",
+                padding: "10px 20px",
+                border: "1px solid #000",
+                fontSize: "15px",
+                fontWeight: "500",
+              }}
+            />
+            <div
+              style={{
+                display: "flex",
+                gap: "10px",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                border: "1px solid #000",
+                width: "fit-content",
+                padding: "10px 20px",
+                borderRadius: "25px",
+              }}
+            >
+              <Typography styling="font-weight: 600; font-size: 15px; color: #000;">
+                Join the Waitlist
+              </Typography>
+              <MdArrowOutward size={24} color="black" />
+            </div>
+          </Waitlist>
+          <Typography styling="font-weight: 400; font-size: 15px; line-height: 20px; color: rgba(0,0,0,0.5); width: 40%; text-align: center;">
+            By joining our waitlist, you'll receive exclusive early access and
+            special launch discounts.
+          </Typography>
+        </Bottom>
       </Container>
+      <Footer/>
     </Wrapper>
   );
 };
