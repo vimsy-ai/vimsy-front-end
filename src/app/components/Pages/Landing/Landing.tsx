@@ -32,7 +32,13 @@ const pulse = keyframes`
 `;
 
 
-// Styled Components
+interface SocialIconProps {
+  $shadowColor?: string;
+  $rotate?: string;
+  $delay?: string;
+  $glowColor?: string;
+}
+
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
@@ -84,7 +90,7 @@ const Left = styled.div`
   z-index: 999;
   width: 65%;
   position: relative;
-  background: none; /* Remove original background */
+  background: none;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -145,10 +151,7 @@ const Right = styled.div`
 const Middle = styled.div`
   width: 100%;
   padding: 100px 80px;
-  // height: 700px;
   z-index: 1;
-  // border-top: 0.5px solid #0069a3;
-
 `;
 
 const LeftSection = styled.div`
@@ -178,7 +181,6 @@ const Card = styled.div`
   border-radius: 10px;
   display: flex;
   align-items: flex-start;
-  // justify-content: space-between;
   flex-direction: column;
   gap: 40px;
   padding: 20px;
@@ -189,7 +191,7 @@ const Card = styled.div`
   }
 `;
 
-const SocialIcon = styled.div`
+const SocialIcon = styled.div<SocialIconProps>`
   position: absolute;
   z-index: 3;
   filter: drop-shadow(0 8px 24px ${(props) => props.$shadowColor || "#000"}aa);
