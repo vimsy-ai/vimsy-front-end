@@ -12,7 +12,6 @@ import {
   FaXTwitter,
   FaLinkedin,
   FaFacebook,
-  FaArrowRight,
 } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { Zap } from "lucide-react";
@@ -402,7 +401,7 @@ const Landing = () => {
               Everything you need for AI-Powered marketing{" "}
             </Typography>
             <Typography styling="font-weight: 400; font-size: 20px; line-height: 30px; color: rgba(0,0,0,0.5);">
-              From content generation to custom bots, we've got you covered.
+              From content generation to custom bots, we have got you covered.
             </Typography>
           </LeftSection>
           <Cards>
@@ -451,7 +450,7 @@ const Landing = () => {
               Stay Tuned - Coming Soon
             </Typography>
             <Typography styling="font-weight: 400; font-size: 20px; line-height: 30px; color: rgba(0,0,0,0.5); width: 49%; text-align: center;">
-              We're finalizing our pricing plans to offer you the best value.
+              We are finalizing our pricing plans to offer you the best value.
               Sign up for our waitlist to be the first to know when we launch.
             </Typography>{" "}
           </Title>
@@ -487,7 +486,7 @@ const Landing = () => {
             </div>
           </Waitlist>
           <Typography styling="font-weight: 400; font-size: 15px; line-height: 20px; color: rgba(0,0,0,0.5); width: 40%; text-align: center;">
-            By joining our waitlist, you'll receive exclusive early access and
+            By joining our waitlist, you will receive exclusive early access and
             special launch discounts.
           </Typography>
         </Bottom>

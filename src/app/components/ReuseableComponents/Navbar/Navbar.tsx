@@ -36,15 +36,7 @@ const Right = styled.div`
   width: 100%; /* Ensure it takes full width */
 `;
 
-const Profile = styled.div`
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 0.5px solid #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+
 
 const Navbar = () => {
   return (
